@@ -41,6 +41,7 @@ import IndentFirst from '@hlw/ckeditor5-plugins/src/indent-first/indentfirst';
 import LineHeight from '@hlw/ckeditor5-plugins/src/line-height/lineheight';
 import Extensions from '@hlw/ckeditor5-plugins/src/extensions/extensions';
 import MediaAutoEmbed from '@ckeditor/ckeditor5-media-embed/src/automediaembed';
+import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
 
 export default class ClassicEditor extends ClassicEditorBase {
 }
@@ -81,6 +82,7 @@ ClassicEditor.builtinPlugins = [
   MediaAutoEmbed,
   IndentFirst,
   LineHeight,
+  ParagraphSpacing,
   Extensions
 ];
 
@@ -106,6 +108,7 @@ ClassicEditor.defaultConfig = {
 	  'numberedList',
 	  '|',
 	  'lineHeight',
+	  'paragraphSpacing',
 	  'indentFirst',
 	  'alignment',
 	  '|',

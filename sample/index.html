@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>CKEditor 5 – classic editor build – development sample</title>
+  <link rel="stylesheet" href="../build/content-style.css">
   <style>
 	body {
 	  max-width: 800px;
@@ -43,7 +44,7 @@
   ];
 
   console.log(CKEDITOR.ClassicBuild.defaultConfig);
-  console.log(CKEDITOR.ClassicBuild.builtinPlugins);
+  console.log(CKEDITOR.ClassicBuild.builtinPlugins.map(p => p.pluginName));
 
   CKEDITOR.ClassicBuild.create(document.querySelector('#editor'), {
 	extensions,
