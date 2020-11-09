@@ -53,6 +53,12 @@ export interface ImageConfig {
 
 export interface LineHeightConfig {
   options?: number[];
+  unit?: 'px';
+}
+
+export interface ParagraphSpacingConfig {
+  options?: number[];
+  unit?: 'px' | '%';
 }
 
 export interface ComponentFactory {
