@@ -97,7 +97,8 @@
     "url": "https://github.com/ckeditor/ckeditor5-build-classic.git"
   },
   "scripts": {
-    "build": "webpack --mode production",
+    "build:prod": "webpack --mode production",
+    "build:dev": "webpack --mode development",
     "lint": "eslint --quiet '**/*.js' --fix",
     "stylelint": "stylelint --quiet --allow-empty-input 'theme/**/*.css' 'docs/**/*.css' 'src/**/*.css' --fix",
     "preversion": "npm run build"
