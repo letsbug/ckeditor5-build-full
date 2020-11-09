@@ -47,6 +47,7 @@ import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
 import IndentFirst from '@hlw/ckeditor5-plugins/src/indent-first/indentfirst';
 import LineHeight from '@hlw/ckeditor5-plugins/src/line-height/lineheight';
 import Extensions from '@hlw/ckeditor5-plugins/src/extensions/extensions';
+import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
 
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
@@ -87,6 +88,7 @@ DecoupledEditor.builtinPlugins = [
 
   // custom build plugins.
   IndentFirst,
+  ParagraphSpacing,
   ImageResize,
   LinkImage,
   LineHeight,
@@ -114,12 +116,15 @@ DecoupledEditor.defaultConfig = {
 	  'italic',
 	  'underline',
 	  'strikethrough',
-	  '|',
-	  'alignment',
-	  '|',
 	  'numberedList',
 	  'bulletedList',
 	  '|',
+	  'paragraphSpacing',
+	  'lineHeight',
+	  'alignment',
+	  '|',
+	  '|',
+	  'indentFirst',
 	  'indent',
 	  'outdent',
 	  '|',

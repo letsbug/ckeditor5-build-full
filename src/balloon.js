@@ -39,6 +39,7 @@ import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
 
 export default class BalloonEditor extends BalloonEditorBase {}
 
@@ -69,6 +70,7 @@ BalloonEditor.builtinPlugins = [
   Font,
   Underline,
   Strikethrough,
+  ParagraphSpacing,
   IndentFirst,
   LineHeight,
   Alignment,
