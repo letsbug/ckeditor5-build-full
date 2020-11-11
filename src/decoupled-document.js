@@ -48,6 +48,7 @@ import IndentFirst from '@hlw/ckeditor5-plugins/src/indent-first/indentfirst';
 import LineHeight from '@hlw/ckeditor5-plugins/src/line-height/lineheight';
 import Extensions from '@hlw/ckeditor5-plugins/src/extensions/extensions';
 import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
+import ClearEmpties from '@hlw/ckeditor5-plugins/src/clear-empties/clearempties';
 
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
@@ -95,6 +96,7 @@ DecoupledEditor.builtinPlugins = [
   Subscript,
   Superscript,
   RemoveFormat,
+  ClearEmpties,
   Extensions,
 ];
 
@@ -135,6 +137,7 @@ DecoupledEditor.defaultConfig = {
 	  'mediaEmbed',
 	  '|',
 	  'removeFormat',
+	  'clearEmpties',
 	],
 	shouldNotGroupWhenFull: true,
   },

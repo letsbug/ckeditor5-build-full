@@ -42,6 +42,7 @@ import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
 import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
+import ClearEmpties from '@hlw/ckeditor5-plugins/src/clear-empties/clearempties';
 
 export default class InlineEditor extends InlineEditorBase {}
 
@@ -82,6 +83,7 @@ InlineEditor.builtinPlugins = [
   RemoveFormat,
   Subscript,
   Superscript,
+  ClearEmpties,
   Extensions,
 ];
 
@@ -105,7 +107,8 @@ InlineEditor.defaultConfig = {
 	  'insertTable',
 	  'mediaEmbed',
 	  'undo',
-	  'redo'
+	  'redo',
+	  'clearEmpties',
 	]
   },
   fontSize: {

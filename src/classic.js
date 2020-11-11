@@ -42,6 +42,7 @@ import LineHeight from '@hlw/ckeditor5-plugins/src/line-height/lineheight';
 import Extensions from '@hlw/ckeditor5-plugins/src/extensions/extensions';
 import MediaAutoEmbed from '@ckeditor/ckeditor5-media-embed/src/automediaembed';
 import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
+import ClearEmpties from '@hlw/ckeditor5-plugins/src/clear-empties/clearempties';
 
 export default class ClassicEditor extends ClassicEditorBase {
 }
@@ -83,6 +84,7 @@ ClassicEditor.builtinPlugins = [
   IndentFirst,
   LineHeight,
   ParagraphSpacing,
+  ClearEmpties,
   Extensions
 ];
 
@@ -118,7 +120,8 @@ ClassicEditor.defaultConfig = {
 	  'insertTable',
 	  'mediaEmbed',
 	  '|',
-	  'removeFormat'
+	  'removeFormat',
+	  'clearEmpties',
 	],
 	shouldNotGroupWhenFull: true
   },

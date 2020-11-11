@@ -40,6 +40,7 @@ import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
+import ClearEmpties from '@hlw/ckeditor5-plugins/src/clear-empties/clearempties';
 
 export default class BalloonEditor extends BalloonEditorBase {}
 
@@ -77,6 +78,7 @@ BalloonEditor.builtinPlugins = [
   ImageResize,
   LinkImage,
   RemoveFormat,
+  ClearEmpties,
   Extensions,
 ];
 
@@ -102,7 +104,8 @@ BalloonEditor.defaultConfig = {
 	  '|',
 	  'undo',
 	  'redo',
-	  'removeFormat'
+	  'removeFormat',
+	  'clearEmpties',
 	]
   },
   fontSize: {
