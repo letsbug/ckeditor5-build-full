@@ -41,6 +41,7 @@ import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
 import ClearEmpties from '@hlw/ckeditor5-plugins/src/clear-empties/clearempties';
+import { fontFamily, fontSize, image, language, table } from './configs';
 
 export default class BalloonEditor extends BalloonEditorBase {}
 
@@ -108,24 +109,10 @@ BalloonEditor.defaultConfig = {
 	  'clearEmpties',
 	]
   },
-  fontSize: {
-	options: [12, 'default', 16, 18, 20, 24, 28, 32, 36, 42],
-  },
-  image: {
-	toolbar: [
-	  'imageStyle:full',
-	  'imageStyle:side',
-	  '|',
-	  'imageTextAlternative'
-	]
-  },
-  table: {
-	contentToolbar: [
-	  'tableColumn',
-	  'tableRow',
-	  'mergeTableCells'
-	]
-  },
+  fontSize,
+  fontFamily,
+  image,
+  table,
   // This value must be kept in sync with the language defined in webpack.config.js.
-  language: 'zh-cn'
+  language,
 };

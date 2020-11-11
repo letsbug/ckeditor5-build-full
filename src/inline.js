@@ -44,6 +44,9 @@ import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
 import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
 import ClearEmpties from '@hlw/ckeditor5-plugins/src/clear-empties/clearempties';
 
+// global configs
+import { fontFamily, fontSize, image, language, table } from './configs';
+
 export default class InlineEditor extends InlineEditorBase {}
 
 // Plugins to include in the build.
@@ -111,24 +114,10 @@ InlineEditor.defaultConfig = {
 	  'clearEmpties',
 	]
   },
-  fontSize: {
-	options: [12, 'default', 16, 18, 20, 24, 28, 32, 36, 42],
-  },
-  image: {
-	toolbar: [
-	  'imageStyle:full',
-	  'imageStyle:side',
-	  '|',
-	  'imageTextAlternative'
-	]
-  },
-  table: {
-	contentToolbar: [
-	  'tableColumn',
-	  'tableRow',
-	  'mergeTableCells'
-	]
-  },
+  fontSize,
+  fontFamily,
+  image,
+  table,
   // This value must be kept in sync with the language defined in webpack.config.js.
-  language: 'zh-cn'
+  language,
 };

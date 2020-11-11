@@ -50,6 +50,9 @@ import Extensions from '@hlw/ckeditor5-plugins/src/extensions/extensions';
 import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
 import ClearEmpties from '@hlw/ckeditor5-plugins/src/clear-empties/clearempties';
 
+// global configs
+import { fontFamily, fontSize, image, language } from './configs';
+
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
@@ -141,57 +144,9 @@ DecoupledEditor.defaultConfig = {
 	],
 	shouldNotGroupWhenFull: true,
   },
-  fontSize: {
-	options: [12, 'default', 16, 18, 20, 24, 28, 32, 36, 42],
-  },
-  image: {
-	styles: ['alignLeft', 'alignCenter', 'alignRight', 'full', 'side'],
-	resizeOptions: [
-	  {
-		name: 'imageResize:original',
-		value: null,
-		icon: 'original',
-	  },
-	  {
-		name: 'imageResize:50',
-		value: '50',
-		icon: 'medium',
-	  },
-	  {
-		name: 'imageResize:75',
-		value: '75',
-		icon: 'large',
-	  },
-	],
-	toolbar: [
-	  'imageStyle:full',
-	  'imageStyle:side',
-	  '|',
-	  'imageStyle:alignLeft',
-	  'imageStyle:alignCenter',
-	  'imageStyle:alignRight',
-	  '|',
-	  'imageResize:50',
-	  'imageResize:75',
-	  'imageResize:original',
-	  '|',
-	  'imageTextAlternative',
-	  '|',
-	  'linkImage',
-	],
-	upload: {
-	  panel: {
-		items: ['insertImageViaUrl'],
-	  },
-	},
-  },
-  table: {
-	contentToolbar: [
-	  'tableColumn',
-	  'tableRow',
-	  'mergeTableCells'
-	]
-  },
+  fontSize,
+  fontFamily,
+  image,
   // This value must be kept in sync with the language defined in webpack.config.js.
-  language: 'zh-cn'
+  language,
 };

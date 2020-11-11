@@ -2,6 +2,7 @@ import BalloonEditor from './balloon';
 import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar';
 
 import '../theme/theme.css';
+import { fontFamily, fontSize, image, language, table } from './configs';
 
 export default class BalloonBlockEditor extends BalloonEditor {}
 
@@ -37,24 +38,10 @@ BalloonEditor.defaultConfig = {
 	  'link'
 	]
   },
-  fontSize: {
-	options: [12, 'default', 16, 18, 20, 24, 28, 32, 36, 42],
-  },
-  image: {
-	toolbar: [
-	  'imageStyle:full',
-	  'imageStyle:side',
-	  '|',
-	  'imageTextAlternative'
-	]
-  },
-  table: {
-	contentToolbar: [
-	  'tableColumn',
-	  'tableRow',
-	  'mergeTableCells'
-	]
-  },
+  fontSize,
+  fontFamily,
+  image,
+  table,
   // This value must be kept in sync with the language defined in webpack.config.js.
-  language: 'zh-cn'
+  language,
 };
