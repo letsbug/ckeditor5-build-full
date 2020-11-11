@@ -55,6 +55,7 @@
     "@ckeditor/ckeditor5-link": "^23.1.0",
     "@ckeditor/ckeditor5-list": "^23.1.0",
     "@ckeditor/ckeditor5-media-embed": "^23.1.0",
+    "@ckeditor/ckeditor5-page-break": "^23.1.0",
     "@ckeditor/ckeditor5-paragraph": "^23.1.0",
     "@ckeditor/ckeditor5-paste-from-office": "^23.1.0",
     "@ckeditor/ckeditor5-remove-format": "^23.1.0",

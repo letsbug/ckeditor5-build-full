@@ -52,6 +52,7 @@ import ClearEmpties from '@hlw/ckeditor5-plugins/src/clear-empties/clearempties'
 
 // global configs
 import { fontFamily, fontSize, image, language } from './configs';
+import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak';
 
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
@@ -98,6 +99,7 @@ DecoupledEditor.builtinPlugins = [
   LineHeight,
   Subscript,
   Superscript,
+  PageBreak,
   RemoveFormat,
   ClearEmpties,
   Extensions,
@@ -138,6 +140,7 @@ DecoupledEditor.defaultConfig = {
 	  'imageUpload',
 	  'insertTable',
 	  'mediaEmbed',
+	  'pageBreak',
 	  '|',
 	  'removeFormat',
 	  'clearEmpties',
