@@ -4,10 +4,10 @@
  */
 
 // global configs
-import { fontSize, image, language, table } from './configs';
+import { fontFamily, fontSize, image, language, table } from './configs';
 
 // The editor creator to use.
-import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
+import BalloonEditorBase from '@ckeditor/ckeditor5-editor-balloon/src/ballooneditor';
 
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
@@ -32,26 +32,23 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 
 // custom requires plugins
 import Font from '@ckeditor/ckeditor5-font/src/font';
-import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
-import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
-import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
-import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
-import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
-import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
-import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
-import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
+import Extensions from '@hlw/ckeditor5-plugins/src/extensions/extensions';
 import IndentFirst from '@hlw/ckeditor5-plugins/src/indent-first/indentfirst';
 import LineHeight from '@hlw/ckeditor5-plugins/src/line-height/lineheight';
-import Extensions from '@hlw/ckeditor5-plugins/src/extensions/extensions';
-import MediaAutoEmbed from '@ckeditor/ckeditor5-media-embed/src/automediaembed';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
+import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
 import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty/clearempty';
+import ClearSpace from '@hlw/ckeditor5-plugins/src/clear-space/clearspace';
 
-export default class ClassicEditor extends ClassicEditorBase {
-}
+export default class BalloonEditor extends BalloonEditorBase {}
 
 // Plugins to include in the build.
-ClassicEditor.builtinPlugins = [
+BalloonEditor.builtinPlugins = [
   Essentials,
   Autoformat,
   Bold,
@@ -74,36 +71,26 @@ ClassicEditor.builtinPlugins = [
   TextTransformation,
 
   // custom build plugins.
+  Font,
   Underline,
   Strikethrough,
-  Subscript,
-  Superscript,
-  Font,
-  Alignment,
-  RemoveFormat,
-  ImageResize,
-  LinkImage,
-  MediaAutoEmbed,
+  ParagraphSpacing,
   IndentFirst,
   LineHeight,
-  ParagraphSpacing,
+  Alignment,
+  ImageResize,
+  LinkImage,
+  RemoveFormat,
   ClearEmpty,
-  Extensions
+  ClearSpace,
+  Extensions,
 ];
 
 // Editor configuration.
-ClassicEditor.defaultConfig = {
+BalloonEditor.defaultConfig = {
   toolbar: {
 	items: [
-	  'undo',
-	  'redo',
-	  '|',
 	  'heading',
-	  '|',
-	  'fontFamily',
-	  'fontSize',
-	  'fontColor',
-	  'fontBackgroundColor',
 	  '|',
 	  'bold',
 	  'italic',
@@ -113,25 +100,23 @@ ClassicEditor.defaultConfig = {
 	  'numberedList',
 	  '|',
 	  'lineHeight',
-	  'paragraphSpacing',
 	  'indentFirst',
 	  'alignment',
 	  '|',
-	  'link',
-	  'imageUpload',
 	  'blockQuote',
 	  'insertTable',
-	  'mediaEmbed',
 	  '|',
+	  'undo',
+	  'redo',
 	  'removeFormat',
 	  'clearEmpty',
-	],
-	shouldNotGroupWhenFull: true
+	  'clearSpace',
+	]
   },
   fontSize,
+  fontFamily,
   image,
   table,
-
   // This value must be kept in sync with the language defined in webpack.config.js.
-  language
+  language,
 };

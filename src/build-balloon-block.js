@@ -1,4 +1,4 @@
-import BalloonEditor from './balloon';
+import BalloonEditor from './build-balloon';
 import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar';
 
 import '../theme/theme.css';
@@ -10,7 +10,7 @@ export default class BalloonBlockEditor extends BalloonEditor {}
 BalloonBlockEditor.builtinPlugins.push(BlockToolbar);
 
 // Editor configuration.
-BalloonEditor.defaultConfig = {
+BalloonBlockEditor.defaultConfig = {
   blockToolbar: [
 	'heading',
 	'|',
