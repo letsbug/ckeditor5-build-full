@@ -3,6 +3,9 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
+// global configs
+import { fontFamily, fontSize, image, language, table } from './configs';
+
 // The editor creator to use.
 import InlineEditorBase from '@ckeditor/ckeditor5-editor-inline/src/inlineeditor';
 
@@ -42,10 +45,7 @@ import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
 import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
-import ClearEmpties from '@hlw/ckeditor5-plugins/src/clear-empties/clearempties';
-
-// global configs
-import { fontFamily, fontSize, image, language, table } from './configs';
+import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty/clearempty';
 
 export default class InlineEditor extends InlineEditorBase {}
 
@@ -86,7 +86,7 @@ InlineEditor.builtinPlugins = [
   RemoveFormat,
   Subscript,
   Superscript,
-  ClearEmpties,
+  ClearEmpty,
   Extensions,
 ];
 
@@ -111,7 +111,7 @@ InlineEditor.defaultConfig = {
 	  'mediaEmbed',
 	  'undo',
 	  'redo',
-	  'clearEmpties',
+	  'clearEmpty',
 	]
   },
   fontSize,

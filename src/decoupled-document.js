@@ -3,6 +3,9 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
+// global configs
+import { fontFamily, fontSize, image, language, table } from './configs';
+
 // The editor creator to use.
 import DecoupledEditorBase from '@ckeditor/ckeditor5-editor-decoupled/src/decouplededitor';
 
@@ -48,11 +51,8 @@ import IndentFirst from '@hlw/ckeditor5-plugins/src/indent-first/indentfirst';
 import LineHeight from '@hlw/ckeditor5-plugins/src/line-height/lineheight';
 import Extensions from '@hlw/ckeditor5-plugins/src/extensions/extensions';
 import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
-import ClearEmpties from '@hlw/ckeditor5-plugins/src/clear-empties/clearempties';
-
-// global configs
-import { fontFamily, fontSize, image, language } from './configs';
 import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak';
+import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty/clearempty';
 
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
@@ -101,7 +101,7 @@ DecoupledEditor.builtinPlugins = [
   Superscript,
   PageBreak,
   RemoveFormat,
-  ClearEmpties,
+  ClearEmpty,
   Extensions,
 ];
 
@@ -143,13 +143,14 @@ DecoupledEditor.defaultConfig = {
 	  'pageBreak',
 	  '|',
 	  'removeFormat',
-	  'clearEmpties',
+	  'clearEmpty',
 	],
 	shouldNotGroupWhenFull: true,
   },
   fontSize,
   fontFamily,
   image,
+  table,
   // This value must be kept in sync with the language defined in webpack.config.js.
   language,
 };

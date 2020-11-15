@@ -3,6 +3,9 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
+// global configs
+import { fontSize, image, language, table } from './configs';
+
 // The editor creator to use.
 import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 
@@ -42,10 +45,7 @@ import LineHeight from '@hlw/ckeditor5-plugins/src/line-height/lineheight';
 import Extensions from '@hlw/ckeditor5-plugins/src/extensions/extensions';
 import MediaAutoEmbed from '@ckeditor/ckeditor5-media-embed/src/automediaembed';
 import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
-import ClearEmpties from '@hlw/ckeditor5-plugins/src/clear-empties/clearempties';
-
-// global configs
-import { fontSize, image, language, table } from './configs';
+import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty/clearempty';
 
 export default class ClassicEditor extends ClassicEditorBase {
 }
@@ -87,7 +87,7 @@ ClassicEditor.builtinPlugins = [
   IndentFirst,
   LineHeight,
   ParagraphSpacing,
-  ClearEmpties,
+  ClearEmpty,
   Extensions
 ];
 
@@ -124,7 +124,7 @@ ClassicEditor.defaultConfig = {
 	  'mediaEmbed',
 	  '|',
 	  'removeFormat',
-	  'clearEmpties',
+	  'clearEmpty',
 	],
 	shouldNotGroupWhenFull: true
   },

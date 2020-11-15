@@ -3,6 +3,9 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
+// global configs
+import { fontFamily, fontSize, image, language, table } from './configs';
+
 // The editor creator to use.
 import BalloonEditorBase from '@ckeditor/ckeditor5-editor-balloon/src/ballooneditor';
 
@@ -18,7 +21,6 @@ import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
-import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
@@ -40,8 +42,7 @@ import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
-import ClearEmpties from '@hlw/ckeditor5-plugins/src/clear-empties/clearempties';
-import { fontFamily, fontSize, image, language, table } from './configs';
+import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty/clearempty';
 
 export default class BalloonEditor extends BalloonEditorBase {}
 
@@ -79,7 +80,7 @@ BalloonEditor.builtinPlugins = [
   ImageResize,
   LinkImage,
   RemoveFormat,
-  ClearEmpties,
+  ClearEmpty,
   Extensions,
 ];
 
@@ -106,7 +107,7 @@ BalloonEditor.defaultConfig = {
 	  'undo',
 	  'redo',
 	  'removeFormat',
-	  'clearEmpties',
+	  'clearEmpty',
 	]
   },
   fontSize,
