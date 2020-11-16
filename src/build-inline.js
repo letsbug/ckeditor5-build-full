@@ -47,6 +47,7 @@ import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
 import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
 import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty/clearempty';
 import ClearSpace from '@hlw/ckeditor5-plugins/src/clear-space/clearspace';
+import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
 
 export default class InlineEditor extends InlineEditorBase {}
 
@@ -90,6 +91,7 @@ InlineEditor.builtinPlugins = [
   ClearEmpty,
   ClearSpace,
   Extensions,
+  WordCount,
 ];
 
 // Editor configuration.

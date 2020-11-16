@@ -47,6 +47,7 @@ import MediaAutoEmbed from '@ckeditor/ckeditor5-media-embed/src/automediaembed';
 import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
 import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty/clearempty';
 import ClearSpace from '@hlw/ckeditor5-plugins/src/clear-space/clearspace';
+import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
 
 export default class ClassicEditor extends ClassicEditorBase {
 }
@@ -90,7 +91,8 @@ ClassicEditor.builtinPlugins = [
   ParagraphSpacing,
   ClearEmpty,
   ClearSpace,
-  Extensions
+  Extensions,
+  WordCount,
 ];
 
 // Editor configuration.
