@@ -54,7 +54,6 @@ import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/parag
 import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak';
 import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty/clearempty';
 import ClearSpace from '@hlw/ckeditor5-plugins/src/clear-space/clearspace';
-import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
 
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
@@ -106,7 +105,6 @@ DecoupledEditor.builtinPlugins = [
   ClearEmpty,
   ClearSpace,
   Extensions,
-  WordCount,
 ];
 
 // Editor configuration.
