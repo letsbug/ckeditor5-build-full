@@ -44,6 +44,7 @@ import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
 import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty/clearempty';
 import ClearSpace from '@hlw/ckeditor5-plugins/src/clear-space/clearspace';
+import SoftBreakToEnter from '@hlw/ckeditor5-plugins/src/soft-break-to-enter/softbreaktoenter';
 
 export default class BalloonEditor extends BalloonEditorBase {}
 
@@ -83,6 +84,7 @@ BalloonEditor.builtinPlugins = [
   RemoveFormat,
   ClearEmpty,
   ClearSpace,
+  SoftBreakToEnter,
   Extensions,
 ];
 
@@ -111,6 +113,7 @@ BalloonEditor.defaultConfig = {
 	  'removeFormat',
 	  'clearEmpty',
 	  'clearSpace',
+	  'softBreakToEnter',
 	]
   },
   fontSize,

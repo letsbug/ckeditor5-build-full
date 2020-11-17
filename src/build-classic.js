@@ -47,6 +47,7 @@ import MediaAutoEmbed from '@ckeditor/ckeditor5-media-embed/src/automediaembed';
 import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
 import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty/clearempty';
 import ClearSpace from '@hlw/ckeditor5-plugins/src/clear-space/clearspace';
+import SoftBreakToEnter from '@hlw/ckeditor5-plugins/src/soft-break-to-enter/softbreaktoenter';
 
 export default class ClassicEditor extends ClassicEditorBase {
 }
@@ -90,6 +91,7 @@ ClassicEditor.builtinPlugins = [
   ParagraphSpacing,
   ClearEmpty,
   ClearSpace,
+  SoftBreakToEnter,
   Extensions,
 ];
 
@@ -128,6 +130,7 @@ ClassicEditor.defaultConfig = {
 	  'removeFormat',
 	  'clearEmpty',
 	  'clearSpace',
+	  'softBreakToEnter',
 	],
 	shouldNotGroupWhenFull: true
   },
