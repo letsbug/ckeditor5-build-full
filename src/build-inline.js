@@ -32,10 +32,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 
 // custom requires plugins
-import Extensions from '@hlw/ckeditor5-plugins/src/extensions/extensions';
 import Font from '@ckeditor/ckeditor5-font/src/font';
-import IndentFirst from '@hlw/ckeditor5-plugins/src/indent-first/indentfirst';
-import LineHeight from '@hlw/ckeditor5-plugins/src/line-height/lineheight';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
@@ -44,10 +41,15 @@ import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
-import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
-import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty/clearempty';
-import ClearSpace from '@hlw/ckeditor5-plugins/src/clear-space/clearspace';
-import SoftBreakToEnter from '@hlw/ckeditor5-plugins/src/soft-break-to-enter/softbreaktoenter';
+
+// custom plugins with @hlw/ckeditor5-plugins
+import Extensions from '@hlw/ckeditor5-plugins/src/extensions/index';
+import IndentFirst from '@hlw/ckeditor5-plugins/src/indent-first/index';
+import LineHeight from '@hlw/ckeditor5-plugins/src/line-height/index';
+import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/index';
+import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty/index';
+import ClearSpace from '@hlw/ckeditor5-plugins/src/clear-space/index';
+import SoftBreakToEnter from '@hlw/ckeditor5-plugins/src/soft-break-to-enter/index';
 
 export default class InlineEditor extends InlineEditorBase {}
 

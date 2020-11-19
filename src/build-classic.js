@@ -40,14 +40,17 @@ import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
-import IndentFirst from '@hlw/ckeditor5-plugins/src/indent-first/indentfirst';
-import LineHeight from '@hlw/ckeditor5-plugins/src/line-height/lineheight';
-import Extensions from '@hlw/ckeditor5-plugins/src/extensions/extensions';
 import MediaAutoEmbed from '@ckeditor/ckeditor5-media-embed/src/automediaembed';
-import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/paragraphspacing';
-import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty/clearempty';
-import ClearSpace from '@hlw/ckeditor5-plugins/src/clear-space/clearspace';
-import SoftBreakToEnter from '@hlw/ckeditor5-plugins/src/soft-break-to-enter/softbreaktoenter';
+
+// custom plugins with @hlw/ckeditor5-plugins
+import Extensions from '@hlw/ckeditor5-plugins/src/extensions/index';
+import IndentFirst from '@hlw/ckeditor5-plugins/src/indent-first/index';
+import LineHeight from '@hlw/ckeditor5-plugins/src/line-height/index';
+import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/index';
+import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty/index';
+import ClearSpace from '@hlw/ckeditor5-plugins/src/clear-space/index';
+import SoftBreakToEnter from '@hlw/ckeditor5-plugins/src/soft-break-to-enter/index';
+import QuickStyle from '@hlw/ckeditor5-plugins/src/quick-style';
 
 export default class ClassicEditor extends ClassicEditorBase {
 }
@@ -92,6 +95,7 @@ ClassicEditor.builtinPlugins = [
   ClearEmpty,
   ClearSpace,
   SoftBreakToEnter,
+  QuickStyle,
   Extensions,
 ];
 
@@ -131,6 +135,8 @@ ClassicEditor.defaultConfig = {
 	  'clearEmpty',
 	  'clearSpace',
 	  'softBreakToEnter',
+	  '|',
+	  'quickStyle'
 	],
 	shouldNotGroupWhenFull: true
   },
