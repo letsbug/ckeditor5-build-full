@@ -5,11 +5,11 @@ import BalloonBlockBuild from './build-balloon-block';
 import DocumentBuild from './build-decoupled-document';
 
 const CKEditor = {
+  DocumentBuild,
   ClassicBuild,
   InlineBuild,
   BalloonBuild,
   BalloonBlockBuild,
-  DocumentBuild,
 }
 
 export default CKEditor;

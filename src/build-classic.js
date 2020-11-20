@@ -50,7 +50,7 @@ import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/index
 import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty/index';
 import ClearSpace from '@hlw/ckeditor5-plugins/src/clear-space/index';
 import SoftBreakToEnter from '@hlw/ckeditor5-plugins/src/soft-break-to-enter/index';
-import QuickStyle from '@hlw/ckeditor5-plugins/src/quick-style';
+// import QuickStyle from '@hlw/ckeditor5-plugins/src/quick-style';
 
 export default class ClassicEditor extends ClassicEditorBase {
 }
@@ -95,7 +95,7 @@ ClassicEditor.builtinPlugins = [
   ClearEmpty,
   ClearSpace,
   SoftBreakToEnter,
-  QuickStyle,
+  // QuickStyle,
   Extensions,
 ];
 
@@ -135,8 +135,8 @@ ClassicEditor.defaultConfig = {
 	  'clearEmpty',
 	  'clearSpace',
 	  'softBreakToEnter',
-	  '|',
-	  'quickStyle'
+	  // '|',
+	  // 'quickStyle'
 	],
 	shouldNotGroupWhenFull: true
   },
