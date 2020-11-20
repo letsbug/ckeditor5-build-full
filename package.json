@@ -28,11 +28,15 @@
     "src"
   ],
   "dependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
     "@ckeditor/ckeditor5-core": "^23.1.0",
     "@ckeditor/ckeditor5-engine": "^23.1.0",
     "@ckeditor/ckeditor5-ui": "^23.1.0",
     "@ckeditor/ckeditor5-widget": "^23.1.0",
-    "@types/ckeditor__ckeditor5-core": "^11.0.3"
+    "@types/ckeditor__ckeditor5-core": "^11.0.3",
+    "babel-loader": "^8.2.1",
+    "regenerator-runtime": "^0.13.7"
   },
   "devDependencies": {
     "@ckeditor/ckeditor5-alignment": "^23.1.0",
@@ -69,6 +73,7 @@
     "@typescript-eslint/eslint-plugin": "^4.6.0",
     "@typescript-eslint/parser": "^4.6.0",
     "css-loader": "^5.0.0",
+    "eslint": "^7.13.0",
     "eslint-config-ckeditor5": "^3.1.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.1.4",
