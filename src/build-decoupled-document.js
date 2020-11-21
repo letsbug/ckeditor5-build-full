@@ -55,6 +55,7 @@ import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing/index
 import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty/index';
 import ClearSpace from '@hlw/ckeditor5-plugins/src/clear-space/index';
 import SoftBreakToEnter from '@hlw/ckeditor5-plugins/src/soft-break-to-enter/index';
+import QuickStyle from '@hlw/ckeditor5-plugins/src/quick-style';
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
@@ -103,6 +104,7 @@ DecoupledEditor.builtinPlugins = [
 	ClearEmpty,
 	ClearSpace,
 	SoftBreakToEnter,
+  	QuickStyle,
 	Extensions,
 ];
 
@@ -143,6 +145,8 @@ DecoupledEditor.defaultConfig = {
 			'clearEmpty',
 			'clearSpace',
 			'softBreakToEnter',
+		  	'|',
+		  	'quickStyle'
 		],
 		shouldNotGroupWhenFull: true,
 	},
