@@ -56,6 +56,7 @@ import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty/index';
 import ClearSpace from '@hlw/ckeditor5-plugins/src/clear-space/index';
 import SoftBreakToEnter from '@hlw/ckeditor5-plugins/src/soft-break-to-enter/index';
 import QuickStyle from '@hlw/ckeditor5-plugins/src/quick-style';
+import ConvertFullHalf from '@hlw/ckeditor5-plugins/src/convert-full-half';
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
@@ -105,6 +106,7 @@ DecoupledEditor.builtinPlugins = [
 	ClearSpace,
 	SoftBreakToEnter,
   	QuickStyle,
+  	ConvertFullHalf,
 	Extensions,
 ];
 
@@ -142,6 +144,7 @@ DecoupledEditor.defaultConfig = {
 			'pageBreak',
 			'|',
 			'removeFormat',
+		  	'convertFullHalf',
 			'clearEmpty',
 			'clearSpace',
 			'softBreakToEnter',
