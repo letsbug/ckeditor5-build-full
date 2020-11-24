@@ -93,15 +93,15 @@ DecoupledEditor.builtinPlugins = [
 	TextTransformation,
 
 	// custom build plugins.
-	IndentFirst,
-	ParagraphSpacing,
 	ImageResize,
 	LinkImage,
-	LineHeight,
 	Subscript,
 	Superscript,
 	PageBreak,
 	RemoveFormat,
+	IndentFirst,
+	ParagraphSpacing,
+	LineHeight,
 	ClearEmpty,
 	ClearSpace,
 	SoftBreakToEnter,
