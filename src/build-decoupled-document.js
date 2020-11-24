@@ -105,8 +105,8 @@ DecoupledEditor.builtinPlugins = [
 	ClearEmpty,
 	ClearSpace,
 	SoftBreakToEnter,
-  	QuickStyle,
-  	ConvertFullHalf,
+	QuickStyle,
+	ConvertFullHalf,
 	Extensions,
 ];
 
@@ -144,12 +144,12 @@ DecoupledEditor.defaultConfig = {
 			'pageBreak',
 			'|',
 			'removeFormat',
-		  	'convertFullHalf',
+			'convertFullHalf',
 			'clearEmpty',
 			'clearSpace',
 			'softBreakToEnter',
-		  	'|',
-		  	'quickStyle'
+			'|',
+			'quickStyle',
 		],
 		shouldNotGroupWhenFull: true,
 	},
