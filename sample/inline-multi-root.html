@@ -50,7 +50,7 @@
   const roots = document.querySelectorAll('.multi-root-node');
   Array.from(roots).forEach(el => {
 	CKEDITOR.InlineBuild.create(el).then(editor => {
-	  window.editor = editor;
+	  // window.editor = editor;
 	  console.log(editor);
 	}).catch(err => {
 	  console.log(err.stack);
