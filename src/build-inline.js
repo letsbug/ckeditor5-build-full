@@ -4,7 +4,7 @@
  */
 
 // global configs
-import { builtinPlugins, fontFamily, fontSize, generateToolbar, image, language, table } from './configs';
+import { builtins, fontFamily, fontSize, toolbarer, image, language, table } from './configs';
 
 // The editor creator to use.
 import InlineEditorBase from '@ckeditor/ckeditor5-editor-inline/src/inlineeditor';
@@ -12,16 +12,17 @@ import InlineEditorBase from '@ckeditor/ckeditor5-editor-inline/src/inlineeditor
 export default class InlineEditor extends InlineEditorBase {}
 
 // Plugins to include in the build.
-InlineEditor.builtinPlugins = builtinPlugins;
+InlineEditor.builtinPlugins = builtins;
 
 // Editor configuration.
 InlineEditor.defaultConfig = {
 	toolbar: {
-		items: generateToolbar(
+		items: toolbarer(
 			`heading, |,
-			bold, italic, link, bulletedList, numberedList, |,
-			indentFirst, |,
-			imageUpload, blockQuote, insertTable, mediaEmbed, undo, redo, clearEmpty, clearSpace, softBreakToEnter`
+			bold, italic, underline, bulletedList, numberedList, |,
+			indentFirst, alignment, |,
+			link, imageUpload, mediaEmbed, insertTable, blockQuote, |,
+			clearEmpty, clearSpace, softBreakToEnter`
 		),
 		shouldNotGroupWhenFull: true,
 	},

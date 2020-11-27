@@ -4,7 +4,7 @@
  */
 
 // global configs
-import { builtinPlugins, fontFamily, fontSize, generateToolbar, image, language, table } from './configs';
+import { builtins, fontFamily, fontSize, toolbarer, image, language, table } from './configs';
 
 // The editor creator to use.
 import DecoupledEditorBase from '@ckeditor/ckeditor5-editor-decoupled/src/decouplededitor';
@@ -12,12 +12,12 @@ import DecoupledEditorBase from '@ckeditor/ckeditor5-editor-decoupled/src/decoup
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
 // Plugins to include in the build.
-DecoupledEditor.builtinPlugins = builtinPlugins;
+DecoupledEditor.builtinPlugins = builtins;
 
 // Editor configuration.
 DecoupledEditor.defaultConfig = {
 	toolbar: {
-		items: generateToolbar(
+		items: toolbarer(
 			`undo, redo, |,
 			heading, |,
 			fontfamily, fontsize, fontColor, fontBackgroundColor, |,

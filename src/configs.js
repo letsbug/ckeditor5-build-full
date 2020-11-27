@@ -42,7 +42,7 @@ import ConvertFullHalf from '@hlw/ckeditor5-plugins/src/convert-full-half';
 import Extensions from '@hlw/ckeditor5-plugins/src/extensions';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 
-export const builtinPlugins = [
+export const builtins = [
 	Essentials,
 	Alignment,
 	Font,
@@ -159,6 +159,6 @@ export const table = {
 
 export const language = 'zh-cn';
 
-export function generateToolbar(preset) {
+export function toolbarer(preset) {
 	return preset.replaceAll(/[\s]+/g, '').split(',');
 }
