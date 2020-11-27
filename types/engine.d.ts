@@ -53,7 +53,12 @@ export namespace model {
 		decorate(methodName: string): void;
 		delegate(...events: string[]): ckutils.EmitterMixinDelegateChain;
 		fire(eventOrInfo: string | ckutils.EventInfo<ckutils.Emitter>, ...args: any[]): any;
-		listenTo(emitter: ckutils.Emitter, event: string, callback: Function, options?: { priority?: ckutils.PriorityString | number }): void;
+		listenTo(
+			emitter: ckutils.Emitter,
+			event: string,
+			callback: Function,
+			options?: { priority?: ckutils.PriorityString | number }
+		): void;
 		off(event: string, callback?: Function): void;
 		on(event: string, callback: Function, options?: { priority: ckutils.PriorityString | number }): void;
 		once(event: string, callback: Function, options?: { priority: ckutils.PriorityString | number }): void;

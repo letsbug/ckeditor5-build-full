@@ -52,13 +52,13 @@ export interface ImageConfig {
 }
 
 export interface LineHeightConfig {
-  options?: number[];
-  unit?: 'px';
+	options?: number[];
+	unit?: 'px';
 }
 
 export interface ParagraphSpacingConfig {
-  options?: number[];
-  unit?: 'px' | '%';
+	options?: number[];
+	unit?: 'px' | '%';
 }
 
 export interface ComponentFactory {
@@ -131,10 +131,23 @@ export namespace ckeditor {
 		// Emitter
 		delegate(...events: string[]): ckutils.EmitterMixinDelegateChain;
 		fire(eventName: string, ...args: any[]): any;
-		listenTo(emitter: any, eventName: string, callback: (e: ckutils.EventInfo<ckutils.Emitter>) => any, options?: { priority: ckutils.PriorityString | number }): void;
+		listenTo(
+			emitter: any,
+			eventName: string,
+			callback: (e: ckutils.EventInfo<ckutils.Emitter>) => any,
+			options?: { priority: ckutils.PriorityString | number }
+		): void;
 		off(eventName: string, callback: (e: ckutils.EventInfo<ckutils.Emitter>) => any): void;
-		on(eventName: string, callback: (e: ckutils.EventInfo<ckutils.Emitter>) => any, options?: { priority: ckutils.PriorityString | number }): void;
-		once(eventName: string, callback: (e: ckutils.EventInfo<ckutils.Emitter>) => any, options?: { priority: ckutils.PriorityString | number }): void;
+		on(
+			eventName: string,
+			callback: (e: ckutils.EventInfo<ckutils.Emitter>) => any,
+			options?: { priority: ckutils.PriorityString | number }
+		): void;
+		once(
+			eventName: string,
+			callback: (e: ckutils.EventInfo<ckutils.Emitter>) => any,
+			options?: { priority: ckutils.PriorityString | number }
+		): void;
 		stopDelegating(event?: string, emitter?: ckutils.Emitter): void;
 		stopListening(emitter: any, eventName: string, callback: (e: ckutils.EventInfo<ckutils.Emitter>) => any): void;
 
@@ -157,11 +170,9 @@ export namespace ckeditor {
 	}
 
 	export interface CKEditor {
-	  ClassicBuild: EditorBuild;
-	  InlineBuild: EditorBuild;
-	  BalloonBuild: EditorBuild;
-	  BalloonBlockBuild: EditorBuild;
-	  DocumentBuild: EditorBuild;
+		DocumentBuild: EditorBuild;
+		InlineBuild: EditorBuild;
+		ClassicBuild: EditorBuild;
 	}
 }
 
