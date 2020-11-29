@@ -9,12 +9,6 @@ export interface SimpleUploadConfig {
 	headers?: Record<string, string>;
 	uploadUrl?: string;
 	withCredentials?: boolean;
-	key?: string;
-	queries?: any;
-	md5?: {
-		key?: string;
-		handler?: (raw?: File) => Promise<string>;
-	};
 }
 
 export interface WordCountConfig {
