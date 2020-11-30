@@ -1,5 +1,4 @@
-CKEditor 5 build full
-========================================
+# CKEditor5-build-full
 
 此包同时包含了document、inline、classic这3个官方构建，且每个构建都使用的是同一个配置清单，功能上使用了 [ckeditor5-plugins](https://github.com/letsbug/ckeditor5-plugins) 插件包，该插件包包含了首行缩进、行高、段落间距、清除空行、清除多余空格、全半角转换、自定义图片上传文件key、软换行转硬断行、快速排版、自定义扩展等功能。
 
@@ -24,13 +23,13 @@ CKEditor 5 build full
 
 ```bash
 # 目前本人自用采用npm私服安装，未发布到npm官方仓库，客观们可以使用如下命令安装：
-npm i -S https://github.com/letsbug/ckeditor5-plugins.git
+npm i -S https://github.com/letsbug/ckeditor5-build-full.git
 
 # or (if you have configured github's SSH key locally)
-npm i -S git://git@github.com:letsbug/ckeditor5-plugins.git
+npm i -S git://git@github.com:letsbug/ckeditor5-build-full.git
 ```
 
-And use it in your website:
+cdn使用:
 
 ```html
 <div id="editor">
@@ -49,12 +48,12 @@ And use it in your website:
 </script>
 ```
 
-Or in your JavaScript application:
+webpack使用:
 
 ```js
 import CKEditor from '@hlw/ckeditor5-build-full';
 
-// Or using the CommonJS version:
+// 如果你使用的是 CommonJS:
 // const CKEditor = require( '@ckeditor/ckeditor5-build-classic' );
 
 CKEditor.ClassicBuild
