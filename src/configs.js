@@ -160,5 +160,8 @@ export const table = {
 export const language = 'zh-cn';
 
 export function toolbarer(preset) {
-	return preset.replaceAll(/[\s]+/g, '').split(',');
+	return preset
+		.replace(/[\s]+/g, '')
+		.split(',')
+		.filter((bar) => !!bar);
 }
