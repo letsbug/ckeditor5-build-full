@@ -9,6 +9,7 @@ export interface SimpleUploadConfig {
 	headers?: Record<string, string>;
 	uploadUrl?: string;
 	withCredentials?: boolean;
+	key?: string;
 }
 
 export interface WordCountConfig {
