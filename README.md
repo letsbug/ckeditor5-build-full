@@ -1,33 +1,33 @@
-CKEditor 5 classic editor build
+CKEditor 5 build full
 ========================================
 
-<h3 align=center>⚠⚠ This repository was moved ⚠⚠</h3>
+此包同时包含了document、inline、classic这3个官方构建，且每个构建都使用的是同一个配置清单，功能上使用了 [ckeditor5-plugins](https://github.com/letsbug/ckeditor5-plugins) 插件包，该插件包包含了首行缩进、行高、段落间距、清除空行、清除多余空格、全半角转换、自定义图片上传文件key、软换行转硬断行、快速排版、自定义扩展等功能。
 
-<p align=center>The package was moved to the <a href="https://github.com/ckeditor/ckeditor5/tree/master/packages">main repository</a>.</p>
 
 [![npm version](https://badge.fury.io/js/%40ckeditor%2Fckeditor5-build-classic.svg)](https://www.npmjs.com/package/@ckeditor/ckeditor5-build-classic)
 [![Dependency Status](https://david-dm.org/ckeditor/ckeditor5-build-classic/status.svg)](https://david-dm.org/ckeditor/ckeditor5-build-classic)
 [![devDependency Status](https://david-dm.org/ckeditor/ckeditor5-build-classic/dev-status.svg)](https://david-dm.org/ckeditor/ckeditor5-build-classic?type=dev)
 
-The classic editor build for CKEditor 5. Read more about the [classic editor build](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor) and see the [demo](https://ckeditor.com/docs/ckeditor5/latest/examples/builds/classic-editor.html).
+此包基于 CKEditor5 进行构建，文档请移步 [build overview](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html)。
 
-![CKEditor 5 classic editor build screenshot](https://c.cksource.com/a/1/img/npm/ckeditor5-build-classic.png)
+![CKEditor 5 classic editor build screenshot](./demo.png)
 
 ## Documentation
 
-See:
-
-* [Installation](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/installation.html) for how to install this package and what it contains.
-* [Basic API](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/basic-api.html) for how to create an editor and interact with it.
-* [Configuration](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/configuration.html) for how to configure the editor.
-* [Creating custom builds](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html) for how to customize the build (configure and rebuild the editor bundle).
+* [Installation](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/installation.html).
+* [Basic API](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/basic-api.html).
+* [Configuration](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/configuration.html).
 
 ## Quick start
 
-First, install the build from npm:
+安装构建:
 
 ```bash
-npm install --save @ckeditor/ckeditor5-build-classic
+# 目前本人自用采用npm私服安装，未发布到npm官方仓库，客观们可以使用如下命令安装：
+npm i -S https://github.com/letsbug/ckeditor5-plugins.git
+
+# or (if you have configured github's SSH key locally)
+npm i -S git://git@github.com:letsbug/ckeditor5-plugins.git
 ```
 
 And use it in your website:
@@ -36,9 +36,9 @@ And use it in your website:
 <div id="editor">
 	<p>This is the editor content.</p>
 </div>
-<script src="./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
+<script src="./node_modules/@hlw/ckeditor5-build-full/build/ckeditor.js"></script>
 <script>
-	ClassicEditor
+	CKEDITOR.ClassicBuild
 		.create( document.querySelector( '#editor' ) )
 		.then( editor => {
 			window.editor = editor;
@@ -52,12 +52,12 @@ And use it in your website:
 Or in your JavaScript application:
 
 ```js
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import CKEditor from '@hlw/ckeditor5-build-full';
 
 // Or using the CommonJS version:
-// const ClassicEditor = require( '@ckeditor/ckeditor5-build-classic' );
+// const CKEditor = require( '@ckeditor/ckeditor5-build-classic' );
 
-ClassicEditor
+CKEditor.ClassicBuild
 	.create( document.querySelector( '#editor' ) )
 	.then( editor => {
 		window.editor = editor;
@@ -67,7 +67,7 @@ ClassicEditor
 	} );
 ```
 
-**Note:** If you are planning to integrate CKEditor 5 deep into your application, it is actually more convenient and recommended to install and import the source modules directly (like it happens in `ckeditor.js`). Read more in the [Advanced setup guide](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/advanced-setup.html).
+**Note:** 如果客观们想更深层次的进行集成，更好的进行自定义构建，本项目也可以作为一种参考，(eg: `src/ckeditor.js`). 官方文档： [Advanced setup guide](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/advanced-setup.html).
 
 ## License
 

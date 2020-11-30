@@ -93,16 +93,16 @@
     "node": ">=8.0.0",
     "npm": ">=5.7.1"
   },
-  "author": "CKSource (http://cksource.com/)",
-  "license": "GPL-2.0-or-later",
-  "homepage": "https://ckeditor.com/ckeditor-5",
-  "bugs": "https://github.com/ckeditor/ckeditor5/issues",
+  "author": "letsbug (https://github.com/letsbug)",
+  "license": "MIT",
+  "homepage": "https://github.com/letsbug/ckeditor5-build-full#readme",
+  "bugs": "https://github.com/letsbug/ckeditor5-build-full/issues",
   "publishConfig": {
     "registry": "http://10.3.196.23:8081/repository/npm-hosted/"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor5-build-classic.git"
+    "url": "https://github.com/letsbug/ckeditor5-build-full.git"
   },
   "scripts": {
     "build:prod": "webpack --mode production",
