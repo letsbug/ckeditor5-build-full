@@ -30,17 +30,17 @@ import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 
 // custom plugins with @hlw/ckeditor5-plugins
-import IndentFirst from '@hlw/ckeditor5-plugins/src/indent-first';
-import ParagraphSpacing from '@hlw/ckeditor5-plugins/src/paragraph-spacing';
-import LineHeight from '@hlw/ckeditor5-plugins/src/line-height';
-import ClearEmpty from '@hlw/ckeditor5-plugins/src/clear-empty';
-import ClearSpace from '@hlw/ckeditor5-plugins/src/clear-space';
-import SoftBreakToEnter from '@hlw/ckeditor5-plugins/src/soft-break-to-enter';
-import QuickStyle from '@hlw/ckeditor5-plugins/src/quick-style';
-import ConvertFullHalf from '@hlw/ckeditor5-plugins/src/convert-full-half';
-import Extensions from '@hlw/ckeditor5-plugins/src/extensions';
+import IndentFirst from '@hlx/ckeditor5-plugins/src/indent-first';
+import ParagraphSpacing from '@hlx/ckeditor5-plugins/src/paragraph-spacing';
+import LineHeight from '@hlx/ckeditor5-plugins/src/line-height';
+import ClearEmpty from '@hlx/ckeditor5-plugins/src/clear-empty';
+import ClearSpace from '@hlx/ckeditor5-plugins/src/clear-space';
+import SoftBreakToEnter from '@hlx/ckeditor5-plugins/src/soft-break-to-enter';
+import QuickStyle from '@hlx/ckeditor5-plugins/src/quick-style';
+import ConvertFullHalf from '@hlx/ckeditor5-plugins/src/convert-full-half';
+import Extensions from '@hlx/ckeditor5-plugins/src/extensions';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
-import SimpleAdapter from '@hlw/ckeditor5-plugins/src/simple-adapter';
+import SimpleAdapter from '@hlx/ckeditor5-plugins/src/simple-adapter';
 
 export const builtins = [
 	Essentials,
@@ -159,6 +159,7 @@ export const table = {
 
 export const language = 'zh-cn';
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function toolbarer(preset) {
 	return preset
 		.replace(/[\s]+/g, '')
