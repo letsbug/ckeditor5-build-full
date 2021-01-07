@@ -28,7 +28,6 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
-import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
 
 // custom plugins with @hlw/ckeditor5-plugins
 import IndentFirst from '@hlx/ckeditor5-plugins/src/indent-first';
@@ -42,6 +41,7 @@ import ConvertFullHalf from '@hlx/ckeditor5-plugins/src/convert-full-half';
 import Extensions from '@hlx/ckeditor5-plugins/src/extensions';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import SimpleAdapter from '@hlx/ckeditor5-plugins/src/simple-adapter';
+import Counter from '@hlx/ckeditor5-plugins/src/counter';
 
 export const builtins = [
 	Essentials,
@@ -76,7 +76,7 @@ export const builtins = [
 	Superscript,
 	SimpleAdapter,
 	RemoveFormat,
-	WordCount,
+	Counter,
 
 	// custom plugins with @hlw/ckeditor5-plugins
 	IndentFirst,

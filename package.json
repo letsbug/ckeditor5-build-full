@@ -62,7 +62,6 @@
     "@ckeditor/ckeditor5-typing": "^24.0.0",
     "@ckeditor/ckeditor5-upload": "^24.0.0",
     "@ckeditor/ckeditor5-utils": "^24.0.0",
-    "@ckeditor/ckeditor5-word-count": "^24.0.0",
     "@hlx/ckeditor5-plugins": "^24.0.0",
     "@typescript-eslint/eslint-plugin": "^4.11.0",
     "@typescript-eslint/parser": "^4.11.0",

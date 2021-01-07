@@ -78,6 +78,7 @@
 <script>
 	CKEDITOR.DocumentBuild.create(document.querySelector('.editor-body')).then(editor => {
 		document.querySelector('.editor-toolbar').appendChild(editor.ui.view.toolbar.element);
+		document.querySelector('.editor-footer').appendChild(editor.plugins.get('Counter').CounterContainer);
 	});
 </script>
 
