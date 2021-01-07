@@ -19,6 +19,13 @@ export interface WordCountConfig {
 	onUpdate?: Function;
 }
 
+export interface CounterConfig {
+	container?: HTMLElement;
+	characters?: boolean;
+	doubles?: boolean;
+	onUpdate?: Function;
+}
+
 export interface FontColorConfig {
 	colors?: Array<string | any>;
 	columns?: number;
@@ -90,6 +97,7 @@ export namespace ckeditor {
 		simpleUpload?: SimpleUploadConfig;
 		lineHeight?: LineHeightConfig;
 		wordCount?: WordCountConfig;
+		counter?: CounterConfig;
 		title?: { placeholder?: string };
 		placeholder?: string;
 		extensions?: Array<ExtensionsConfig>;
