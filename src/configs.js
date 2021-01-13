@@ -42,6 +42,7 @@ import Extensions from '@hlx/ckeditor5-plugins/src/extensions';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import SimpleAdapter from '@hlx/ckeditor5-plugins/src/simple-adapter';
 import Counter from '@hlx/ckeditor5-plugins/src/counter';
+import MediaEmbedToolbar from '@ckeditor/ckeditor5-media-embed/src/mediaembedtoolbar';
 
 export const builtins = [
 	Essentials,
@@ -66,6 +67,7 @@ export const builtins = [
 	List,
 	ListStyle,
 	MediaEmbed,
+	MediaEmbedToolbar,
 	Paragraph,
 	PageBreak,
 	PasteFromOffice,

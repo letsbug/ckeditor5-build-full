@@ -18,6 +18,10 @@
 <div id="editor" class="ck-content">
 	<h4>Sample&nbsp;&nbsp;&nbsp;&nbsp;</h4>
 
+	<figure class="media">
+		<oembed url="https://www.youtube.com/watch?v=H08tGjXNHO4"></oembed>
+	</figure>
+
 	<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
 	<p id="spaceDemo">&nbsp;&nbsp;&nbsp;This is an instance &nbsp;&nbsp;of the &nbsp;&nbsp;&nbsp;<a
@@ -46,18 +50,22 @@
 			command: (selected) => {
 				console.log('clicked "测试按钮1"', selected);
 			},
-			target: 'image'
 		}
 	];
+
+	const extToolbar = extensions.map(v => v.name);
 
 	CKEDITOR.ClassicBuild.create(document.querySelector('#editor'), {
 		extensions,
 		toolbar: {
-			items: [...CKEDITOR.ClassicBuild.defaultConfig.toolbar.items, '|'].concat(extensions.map(v => v.name)),
+			items: [...CKEDITOR.ClassicBuild.defaultConfig.toolbar.items, '|'].concat(extToolbar),
 			shouldNotGroupWhenFull: true
 		},
 		image: {
-			toolbar: [...CKEDITOR.ClassicBuild.defaultConfig.image.toolbar].concat(extensions.map(v => v.name))
+			toolbar: [...CKEDITOR.ClassicBuild.defaultConfig.image.toolbar].concat(extToolbar)
+		},
+		mediaEmbed: {
+			toolbar: extToolbar
 		}
 	})
 		.then(editor => {
