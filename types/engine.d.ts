@@ -69,6 +69,34 @@ export namespace model {
 		unbind(...unbindProperties: string[]): void;
 	}
 
+	class DocumentSelection {
+		readonly anchor: engine.model.Position | null;
+		readonly focus: engine.model.Position | null;
+		readonly hasOwnRange: Boolean;
+		readonly isBackward: Boolean;
+		readonly isCollapsed: Boolean;
+		readonly isGravityOverridden: Boolean;
+		readonly markers: ckutils.Collection<Marker>;
+		readonly rangeCount: Number;
+
+		destroy(): void;
+
+		containsEntireContent(els: engine.model.Element[]): Boolean;
+		getAttribute(key: string): any;
+		getAttributeKeys(): Iterable<String>;
+		getAttributes(): Iterable<any>;
+		getFirstPosition(): engine.model.Position | null;
+		getFirstRange(): engine.model.Range | null;
+		getLastPosition(): engine.model.Position | null;
+		getLastRange(): engine.model.Range | null;
+		getRanges(): Iterable<engine.model.Range>;
+		getSelectedBlocks(): Iterable<engine.model.Element>;
+		getSelectedElement(): engine.model.Element;
+
+		hasAttribute(key: String): Boolean;
+		is(key: String): Boolean;
+	}
+
 	class Schema {
 		addAttributeCheck: Function;
 		addChildCheck: Function;
@@ -77,11 +105,6 @@ export namespace model {
 		register: Function;
 
 		extend(to: string, params: { allowAttributes: string | string[] }): void;
-	}
-
-	class Model extends engine.model.Model {
-		readonly document: Document;
-		readonly schema: Schema;
 	}
 
 	class SchemaContext extends engine.model.SchemaContext implements Iterable<engine.model.SchemaContextItem> {
@@ -95,6 +118,52 @@ export namespace model {
 		getNames(): Iterable<string>;
 		push(item: string | engine.model.Node | Array<string | engine.model.Node>): SchemaContext;
 		startsWith(query: string): boolean;
+	}
+
+	class Marker {
+		affectsData: any;
+		managedUsingOperations: any;
+		readonly name: string;
+
+		getEnd(): engine.model.Position;
+		getRange(): engine.model.Range;
+		getStart(): engine.model.Position;
+		is(type: string): Boolean;
+
+		on(evt: 'change:content' | 'change:range', eventInfo: ckutils.EventInfo<any>, old: any, data: any): void;
+	}
+
+	class MarkerCollection {
+		[Symbol.iterator](): Iterator<Marker>;
+
+		destroy(): void;
+
+		get(name: string): Marker | null;
+		getMarkersAtPosition(position: engine.model.Position): Iterable<Marker>;
+		getMarkersGroup(prefix: string): Iterable<Marker>;
+		getMarkersIntersectingRange(range: engine.model.Range): Iterable<Marker>;
+
+		has(markerName: string): Boolean;
+
+		on(
+			eventInfo: ckutils.EventInfo<object>,
+			marker: Marker,
+			oldRange: engine.model.Range | null,
+			newRange: engine.model.Range
+		): void;
+	}
+
+	class Model extends engine.model.Model {
+		readonly document: Document;
+		readonly markers: MarkerCollection;
+		readonly schema: Schema;
+
+		createPositionAt(
+			itemOrPosition: engine.model.Item | engine.model.Position,
+			offset: number | 'end' | 'before' | 'after'
+		): engine.model.Position;
+		createPositionAfter(item: engine.model.Item): engine.model.Position;
+		createPositionBefore(item: engine.model.Item): engine.model.Position;
 	}
 }
 
