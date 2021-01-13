@@ -49,10 +49,19 @@ export namespace conversion {
 
 export namespace model {
 	class Document implements ckutils.Emitter, ckutils.Observable {
+		readonly differ: engine.model.Differ;
+		readonly graveyard: engine.model.RootElement;
+		readonly history: engine.model.History;
+		readonly model: Model;
+		readonly selection: DocumentSelection;
+		readonly version: Number;
+
 		bind(...bindProperties: string[]): ckutils.BindChain;
 		decorate(methodName: string): void;
 		delegate(...events: string[]): ckutils.EmitterMixinDelegateChain;
 		fire(eventOrInfo: string | ckutils.EventInfo<ckutils.Emitter>, ...args: any[]): any;
+		getRoot(name?: String): engine.model.RootElement | null;
+		getRootNames(): Array<String>;
 		listenTo(
 			emitter: ckutils.Emitter,
 			event: string,
