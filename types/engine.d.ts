@@ -174,6 +174,103 @@ export namespace model {
 		createPositionAfter(item: engine.model.Item): engine.model.Position;
 		createPositionBefore(item: engine.model.Item): engine.model.Position;
 	}
+
+	class Writer {
+		readonly batch: any;
+		readonly model: Model;
+
+		addMarker(name: string, options: { usingOperation: boolean; range: Range; affectsData?: boolean }): Marker;
+		append(
+			item: engine.model.Item | engine.model.DocumentFragment,
+			parent: engine.model.Element | engine.model.DocumentFragment
+		): void;
+		appendElement(name: string, parent: engine.model.Element | engine.model.DocumentFragment): void;
+		appendElement(name: string, attributes: Object, parent: engine.model.Element | engine.model.DocumentFragment): void;
+		appendText(name: string, parent: engine.model.Element | engine.model.DocumentFragment): void;
+		appendText(name: string, attributes: Object, parent: engine.model.Element | engine.model.DocumentFragment): void;
+		clearAttributes(itemOrRange: engine.model.Item | engine.model.Range): void;
+		cloneElement(element: engine.model.Element, deep?: boolean): engine.model.Element;
+		createDocumentFragment(): engine.model.DocumentFragment;
+		createElement(name: string, attributes?: Object): engine.model.Element;
+		createPositionAfter(item: engine.model.Item): engine.model.Position;
+		createPositionAt(item: engine.model.Item, offset?: number | 'end' | 'before' | 'after'): engine.model.Position;
+		createPositionBefore(item: engine.model.Item): engine.model.Position;
+		createPositionFromPath(
+			root: engine.model.Element | engine.model.DocumentFragment,
+			path: Array<number>,
+			stickiness?: engine.model.PositionStickiness
+		): engine.model.Position;
+		createRange(start: engine.model.Position, end?: engine.model.Position): engine.model.Range;
+		createRangeIn(element: engine.model.Element): engine.model.Range;
+		createRangeOn(element: engine.model.Element): engine.model.Range;
+		createSelection(
+			selectable: any,
+			placeOrOffset?: number | 'before' | 'end' | 'after' | 'on' | 'in',
+			options?: { backward?: boolean } | Object
+		): Selection;
+		createText(data, attributes?: Object): engine.model.Text;
+		insert(
+			item: engine.model.Item | engine.model.DocumentFragment,
+			itemOrPosition: engine.model.Item | engine.model.Position,
+			offset?: Number | 'end' | 'before' | 'after'
+		): void;
+		insertElement(name: string, attributes?: Object): void;
+		insertElement(name: string, attributes: Object, itemOrPosition: engine.model.Item | engine.model.Position): void;
+		insertElement(
+			name: string,
+			itemOrPosition: engine.model.Item | engine.model.Position,
+			offset: Number | 'end' | 'before' | 'after'
+		): void;
+		insertText(name: string, attributes?: Object): void;
+		insertText(name: string, attributes: Object, itemOrPosition: engine.model.Item | engine.model.Position): void;
+		insertText(
+			name: string,
+			itemOrPosition: engine.model.Item | engine.model.Position,
+			offset: Number | 'end' | 'before' | 'after'
+		): void;
+		merge(position: engine.model.Position): void;
+		move(
+			range: engine.model.Range,
+			itemOrPosition: engine.model.Item | engine.model.Position,
+			offset?: Number | 'end' | 'before' | 'after'
+		): void;
+		overrideSelectionGravity(): string;
+		remove(itemOrRange: engine.model.Item | engine.model.Range): void;
+		removeAttribute(key: string, itemOrRange: engine.model.Item | engine.model.Range): void;
+		removeMarker(markerOrName: string | engine.model.Marker): void;
+		removeSelectionAttribute(keyOrIterableOfKeys: string | Iterable<string>): void;
+		rename(element: engine.model.Element, newName: string): void;
+		restoreSelectionGravity(uid: string): void;
+		setAttribute(key: string, value: string, itemOrRange: engine.model.Item | engine.model.Range): void;
+		setAttributes(attributes: Record<string, string>, itemOrRange: engine.model.Item | engine.model.Range): void;
+		setSelection(
+			selectable:
+				| engine.model.Selection
+				| engine.model.DocumentSelection
+				| engine.model.Position
+				| engine.model.Element
+				| Iterable<engine.model.Range>
+				| engine.model.Range
+				| null,
+			placeOrOffset?: Number | 'before' | 'end' | 'after' | 'on' | 'in',
+			options?: { backward?: boolean } | Record<string, any>
+		): void;
+		setSelectionAttribute(keyOrObjectOrIterable: String | Object | Iterable<any>, value?: any): void;
+		setSelectionFocus(
+			itemOrPosition: engine.model.Item | engine.model.Position,
+			offset?: Number | 'end' | 'before' | 'after'
+		): void;
+		split(
+			position: engine.model.Position,
+			limitElement?: engine.model.Node
+		): { position: engine.model.Position; range: engine.model.Range };
+		unwrap(element: engine.model.Element): void;
+		updateMarker(
+			markerOrName: engine.model.Marker | string,
+			options?: { range?: engine.model.Range; usingOperation?: boolean; affectsData?: boolean }
+		): void;
+		wrap(range: engine.model.Range, elementOrString: engine.model.Element | string): void;
+	}
 }
 
 export namespace view {
