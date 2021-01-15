@@ -60,11 +60,11 @@ export interface MediaEmbedProvider {
 }
 
 export interface MediaEmbedConfig {
-	providers: MediaEmbedProvider[];
-	extraProviders: MediaEmbedProvider[];
-	removeProviders: string[];
-	previewsInData: boolean;
-	toolbar: string[];
+	providers?: MediaEmbedProvider[];
+	extraProviders?: MediaEmbedProvider[];
+	removeProviders?: string[];
+	previewsInData?: boolean;
+	toolbar?: string[];
 }
 
 export interface LineHeightConfig {
@@ -102,7 +102,7 @@ export namespace ckeditor {
 		highlight?: core.HighlightConfig;
 		image?: ImageConfig;
 		language?: string;
-		mediaEmbed?: core.MediaEmbedConfig;
+		mediaEmbed?: MediaEmbedConfig;
 		plugins?: Array<string | Plugin>;
 		removePlugins?: string[];
 		toolbar?: string[] | { items?: string[]; viewportTopOffset?: number; shouldNotGroupWhenFull?: boolean };
