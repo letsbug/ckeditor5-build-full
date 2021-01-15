@@ -43,7 +43,7 @@ export interface ExtensionsConfig {
 	label: string;
 	icon: string | SVGElement;
 	command?: (selected?: engine.model.Element) => any;
-	target?: 'base' | 'image' | 'media' | 'table';
+	// target?: 'base' | 'image' | 'media' | 'table';
 }
 
 export interface ImageConfig {
