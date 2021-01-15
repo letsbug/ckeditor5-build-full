@@ -53,6 +53,20 @@ export interface ImageConfig {
 	upload?: any;
 }
 
+export interface MediaEmbedProvider {
+	name: string;
+	url: RegExp | Array<RegExp>;
+	html(match: RegExpMatchArray): string;
+}
+
+export interface MediaEmbedConfig {
+	providers: MediaEmbedProvider[];
+	extraProviders: MediaEmbedProvider[];
+	removeProviders: string[];
+	previewsInData: boolean;
+	toolbar: string[];
+}
+
 export interface LineHeightConfig {
 	options?: number[];
 	unit?: 'px';
