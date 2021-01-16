@@ -78,10 +78,10 @@ export interface ParagraphSpacingConfig {
 }
 
 export interface FindReplaceConfig {
-	type: 'find' | 'replace' | 'replaceAll' | 'reset';
-	position: 'prev' | 'next';
-	key: string[];
-	replace: string;
+	type?: 'find' | 'replace' | 'replaceAll' | 'reset';
+	position?: 'prev' | 'next' | 'none';
+	key?: string[];
+	replace?: string;
 }
 
 export interface ComponentFactory {
