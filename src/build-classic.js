@@ -24,7 +24,8 @@ ClassicEditor.defaultConfig = {
 			bold, italic, underline, strikethrough, bulletedList, numberedList, |,
 			lineHeight, paragraphSpacing, indentFirst, alignment, |,
 			link, imageUpload, blockQuote, insertTable, mediaEmbed, |,
-			removeFormat, clearEmpty, clearSpace, softBreakToEnter`
+			removeFormat, clearEmpty, clearSpace, softBreakToEnter, |,
+			highlight`
 		),
 		shouldNotGroupWhenFull: true,
 	},

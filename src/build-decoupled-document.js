@@ -25,7 +25,8 @@ DecoupledEditor.defaultConfig = {
 			indentFirst, paragraphSpacing, lineHeight, alignment, |,
 			link, blockquote, imageUpload, insertTable, mediaEmbed, pageBreak, |,
 			removeFormat, convertFullHalf, clearEmpty, clearSpace, softBreakToEnter, |,
-			quickStyle`
+			quickStyle, |,
+			highlight`
 		),
 		shouldNotGroupWhenFull: true,
 	},

@@ -27,6 +27,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
+import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 
 // custom plugins with @hlw/ckeditor5-plugins
@@ -76,6 +77,7 @@ export const builtins = [
 	TextTransformation,
 	Subscript,
 	Superscript,
+	Highlight,
 	SimpleAdapter,
 	RemoveFormat,
 	Counter,
