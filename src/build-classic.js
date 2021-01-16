@@ -18,14 +18,14 @@ ClassicEditor.builtinPlugins = builtins;
 ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: toolbarer(
-			`undo, redo, |,
+			`findReplace, |,
+			undo, redo, |,
 			heading, |,
 			fontFamily, fontSize, fontColor, fontBackgroundColor, |,
 			bold, italic, underline, strikethrough, bulletedList, numberedList, |,
 			lineHeight, paragraphSpacing, indentFirst, alignment, |,
 			link, imageUpload, blockQuote, insertTable, mediaEmbed, |,
-			removeFormat, clearEmpty, clearSpace, softBreakToEnter, |,
-			highlight`
+			removeFormat, clearEmpty, clearSpace, softBreakToEnter`
 		),
 		shouldNotGroupWhenFull: true,
 	},

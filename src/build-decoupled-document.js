@@ -18,15 +18,15 @@ DecoupledEditor.builtinPlugins = builtins;
 DecoupledEditor.defaultConfig = {
 	toolbar: {
 		items: toolbarer(
-			`undo, redo, |,
+			`findReplace, |,
+			undo, redo, |,
 			heading, |,
 			fontfamily, fontsize, fontColor, fontBackgroundColor, |,
 			bold, italic, underline, strikethrough, numberedList, bulletedList, |,
 			indentFirst, paragraphSpacing, lineHeight, alignment, |,
 			link, blockquote, imageUpload, insertTable, mediaEmbed, pageBreak, |,
 			removeFormat, convertFullHalf, clearEmpty, clearSpace, softBreakToEnter, |,
-			quickStyle, |,
-			highlight`
+			quickStyle`
 		),
 		shouldNotGroupWhenFull: true,
 	},

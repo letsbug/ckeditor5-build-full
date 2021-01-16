@@ -27,7 +27,6 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
-import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 
 // custom plugins with @hlw/ckeditor5-plugins
@@ -44,6 +43,7 @@ import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import SimpleAdapter from '@hlx/ckeditor5-plugins/src/simple-adapter';
 import Counter from '@hlx/ckeditor5-plugins/src/counter';
 import MediaEmbedToolbar from '@ckeditor/ckeditor5-media-embed/src/mediaembedtoolbar';
+import FindReplace from '@hlx/ckeditor5-plugins/src/find-replace';
 
 export const builtins = [
 	Essentials,
@@ -77,12 +77,12 @@ export const builtins = [
 	TextTransformation,
 	Subscript,
 	Superscript,
-	Highlight,
 	SimpleAdapter,
 	RemoveFormat,
 	Counter,
 
 	// custom plugins with @hlw/ckeditor5-plugins
+	FindReplace,
 	IndentFirst,
 	ParagraphSpacing,
 	LineHeight,

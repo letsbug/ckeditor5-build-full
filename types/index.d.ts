@@ -77,6 +77,13 @@ export interface ParagraphSpacingConfig {
 	unit?: 'px' | '%';
 }
 
+export interface FindReplaceConfig {
+	type: 'find' | 'replace' | 'replaceAll' | 'reset';
+	position: 'prev' | 'next';
+	key: string[];
+	replace: string;
+}
+
 export interface ComponentFactory {
 	add(name: string, callback: (...args: any) => any): void;
 	has(name: string): boolean;
