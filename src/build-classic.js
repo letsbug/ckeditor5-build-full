@@ -24,7 +24,7 @@ ClassicEditor.defaultConfig = {
 			fontFamily, fontSize, fontColor, fontBackgroundColor, |,
 			bold, italic, underline, strikethrough, bulletedList, numberedList, |,
 			lineHeight, paragraphSpacing, indentFirst, alignment, |,
-			link, imageUpload, blockQuote, insertTable, mediaEmbed, |,
+			link, uploadImage, blockQuote, insertTable, mediaEmbed, |,
 			removeFormat, clearEmpty, clearSpace, softBreakToEnter`
 		),
 		shouldNotGroupWhenFull: true,

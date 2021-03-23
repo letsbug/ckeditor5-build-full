@@ -21,7 +21,7 @@ InlineEditor.defaultConfig = {
 			`heading, |,
 			bold, italic, underline, bulletedList, numberedList, |,
 			indentFirst, alignment, |,
-			link, imageUpload, mediaEmbed, insertTable, blockQuote, |,
+			link, uploadImage, mediaEmbed, insertTable, blockQuote, |,
 			clearEmpty, clearSpace, softBreakToEnter`
 		),
 		shouldNotGroupWhenFull: true,

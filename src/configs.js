@@ -121,17 +121,17 @@ export const image = {
 	styles: ['alignLeft', 'alignCenter', 'alignRight', 'full', 'side'],
 	resizeOptions: [
 		{
-			name: 'imageResize:original',
+			name: 'resizeImage:original',
 			value: null,
 			icon: 'original',
 		},
 		{
-			name: 'imageResize:50',
+			name: 'resizeImage:50',
 			value: '50',
 			icon: 'medium',
 		},
 		{
-			name: 'imageResize:75',
+			name: 'resizeImage:75',
 			value: '75',
 			icon: 'large',
 		},
@@ -144,9 +144,9 @@ export const image = {
 		'imageStyle:alignCenter',
 		'imageStyle:alignRight',
 		'|',
-		'imageResize:50',
-		'imageResize:75',
-		'imageResize:original',
+		'resizeImage:50',
+		'resizeImage:75',
+		'resizeImage:original',
 		'|',
 		'imageTextAlternative',
 		'|',
