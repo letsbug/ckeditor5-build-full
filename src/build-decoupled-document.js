@@ -20,6 +20,7 @@ DecoupledEditor.defaultConfig = {
 		items: toolbarer(
 			`findReplace, |,
 			undo, redo, |,
+			formatPainter, |,
 			heading, |,
 			fontfamily, fontsize, fontColor, fontBackgroundColor, |,
 			bold, italic, underline, strikethrough, numberedList, bulletedList, |,

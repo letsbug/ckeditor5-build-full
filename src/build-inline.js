@@ -18,7 +18,9 @@ InlineEditor.builtinPlugins = builtins;
 InlineEditor.defaultConfig = {
 	toolbar: {
 		items: toolbarer(
-			`heading, |,
+			`
+			formatPainter, |,
+			heading, |,
 			bold, italic, underline, bulletedList, numberedList, |,
 			indentFirst, alignment, |,
 			link, uploadImage, mediaEmbed, insertTable, blockQuote, |,

@@ -20,6 +20,7 @@ ClassicEditor.defaultConfig = {
 		items: toolbarer(
 			`findReplace, |,
 			undo, redo, |,
+			formatPainter, |,
 			heading, |,
 			fontFamily, fontSize, fontColor, fontBackgroundColor, |,
 			bold, italic, underline, strikethrough, bulletedList, numberedList, |,

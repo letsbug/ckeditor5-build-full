@@ -33,6 +33,7 @@ import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 import IndentFirst from '@hlx/ckeditor5-plugins/src/indent-first';
 import ParagraphSpacing from '@hlx/ckeditor5-plugins/src/paragraph-style/spacing';
 import LineHeight from '@hlx/ckeditor5-plugins/src/paragraph-style/line-height';
+import FormatPainter from '@hlx/ckeditor5-plugins/src/format-painter';
 import ClearEmpty from '@hlx/ckeditor5-plugins/src/clear-empty';
 import ClearSpace from '@hlx/ckeditor5-plugins/src/clear-space';
 import SoftBreakToEnter from '@hlx/ckeditor5-plugins/src/soft-break-to-enter';
@@ -86,6 +87,7 @@ export const builtins = [
 	IndentFirst,
 	ParagraphSpacing,
 	LineHeight,
+	FormatPainter,
 	ClearEmpty,
 	ClearSpace,
 	SoftBreakToEnter,
