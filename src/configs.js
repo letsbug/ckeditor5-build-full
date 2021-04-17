@@ -98,6 +98,7 @@ export const builtins = [
 
 export const fontSize = {
 	options: [12, 'default', 16, 18, 20, 24, 28, 32, 36, 42],
+	supportAllValues: true,
 };
 
 export const fontFamily = {
