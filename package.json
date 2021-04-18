@@ -62,7 +62,7 @@
     "@ckeditor/ckeditor5-typing": "^27.0.0",
     "@ckeditor/ckeditor5-upload": "^27.0.0",
     "@ckeditor/ckeditor5-utils": "^27.0.0",
-    "@hlx/ckeditor5-plugins": "^27.0.3",
+    "@hlx/ckeditor5-plugins": "^27.0.4",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
     "css-loader": "^5.2.0",
