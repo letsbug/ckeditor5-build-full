@@ -55,14 +55,14 @@
 
 	const extToolbar = extensions.map(v => v.name);
 
-	CKEDITOR.ClassicBuild.create(document.querySelector('#editor'), {
+	HlxRichPkg.ClassicBuild.create(document.querySelector('#editor'), {
 		extensions,
 		toolbar: {
-			items: [...CKEDITOR.ClassicBuild.defaultConfig.toolbar.items, '|'].concat(extToolbar),
+			items: [...HlxRichPkg.ClassicBuild.defaultConfig.toolbar.items, '|'].concat(extToolbar),
 			shouldNotGroupWhenFull: true
 		},
 		image: {
-			toolbar: [...CKEDITOR.ClassicBuild.defaultConfig.image.toolbar].concat(extToolbar)
+			toolbar: [...HlxRichPkg.ClassicBuild.defaultConfig.image.toolbar].concat(extToolbar)
 		},
 		mediaEmbed: {
 			toolbar: extToolbar
