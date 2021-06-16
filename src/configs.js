@@ -16,6 +16,7 @@ import { Table, TableToolbar } from '@ckeditor/ckeditor5-table/src';
 import { TextTransformation } from '@ckeditor/ckeditor5-typing/src';
 import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format/src';
 import { Indent } from '@ckeditor/ckeditor5-indent/src';
+import { Highlight } from '@ckeditor/ckeditor5-highlight';
 
 // custom plugins with @hlw/ckeditor5-plugins
 import IndentFirst from '@hlx/ckeditor5-plugins/src/indent-first';
@@ -66,7 +67,7 @@ export const builtins = [
 	Superscript,
 	SimpleAdapter,
 	RemoveFormat,
-	Counter,
+	Highlight,
 
 	// custom plugins with @hlw/ckeditor5-plugins
 	FindReplace,
@@ -80,6 +81,7 @@ export const builtins = [
 	QuickStyle,
 	ConvertFullHalf,
 	Extensions,
+	Counter,
 ];
 
 export const fontSize = {
