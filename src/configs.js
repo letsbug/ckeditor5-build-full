@@ -142,6 +142,7 @@ export const image = {
 		'imageTextAlternative',
 		'|',
 		'linkImage',
+		'toggleImageCaption',
 	],
 	upload: {
 		panel: {
