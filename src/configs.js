@@ -5,7 +5,8 @@ import { Bold, Italic, Strikethrough, Underline, Subscript, Superscript } from '
 import { Font } from '@ckeditor/ckeditor5-font/src';
 import { BlockQuote } from '@ckeditor/ckeditor5-block-quote/src';
 import { Heading } from '@ckeditor/ckeditor5-heading/src';
-import { Image, ImageCaption, ImageStyle, ImageToolbar, ImageResize, ImageUpload } from '@ckeditor/ckeditor5-image/src';
+import ImageBlock from '@ckeditor/ckeditor5-image/src/imageblock';
+import { ImageCaption, ImageStyle, ImageToolbar, ImageResize, ImageUpload } from '@ckeditor/ckeditor5-image/src';
 import { Link, LinkImage } from '@ckeditor/ckeditor5-link/src';
 import { List, ListStyle } from '@ckeditor/ckeditor5-list/src';
 import { MediaEmbed, MediaEmbedToolbar } from '@ckeditor/ckeditor5-media-embed/src';
@@ -46,6 +47,7 @@ export const builtins = [
 	Heading,
 	Indent,
 	Image,
+	ImageBlock,
 	ImageCaption,
 	ImageStyle,
 	ImageToolbar,
