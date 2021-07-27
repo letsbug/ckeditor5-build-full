@@ -5,6 +5,7 @@
 
 // global configs
 import { builtins, fontSize, toolbarer, image, language, table } from './configs';
+import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
 
 // The editor creator to use.
 import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
@@ -12,13 +13,13 @@ import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classicedi
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
-ClassicEditor.builtinPlugins = builtins;
+ClassicEditor.builtinPlugins = [...builtins, SourceEditing];
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: toolbarer(
-			`findReplace, |,
+			`sourceEditing, |, findReplace, |,
 			undo, redo, |,
 			formatPainter, |,
 			heading, |,
