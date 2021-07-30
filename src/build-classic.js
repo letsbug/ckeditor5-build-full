@@ -4,7 +4,7 @@
  */
 
 // global configs
-import { builtins, fontSize, toolbarer, image, language, table } from './configs';
+import { builtins, fontSize, toolbarer, image, language, table, fontFamily } from './configs';
 import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
 
 // The editor creator to use.
@@ -32,6 +32,7 @@ ClassicEditor.defaultConfig = {
 		shouldNotGroupWhenFull: true,
 	},
 	fontSize,
+	fontFamily,
 	image,
 	table,
 
